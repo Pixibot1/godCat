@@ -19,10 +19,14 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from CATspirations.views import TheocatViewSet
 
+from rest_framework.authtoken import views as auth_views
+
 router = DefaultRouter()
 router.register(r'CATspirations', TheocatViewSet, basename="theocat")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/token/', auth_views.obtain_auth_token)
 ]
