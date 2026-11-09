@@ -40,11 +40,16 @@ INSTALLED_APPS = [
     # added rest
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     # added apps
     'CATspirations',
+    'PURRmission',
 ]
 
 MIDDLEWARE = [
+    # added
+    "corsheaders.middleware.CorsMiddleware", 
+    # ---
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,6 +60,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'godCat.urls'
+
+CORS_ALLOW_ALL_ORIGINS = True # for all connects
 
 import os
 
