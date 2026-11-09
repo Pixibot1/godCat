@@ -19,11 +19,13 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from CATspirations.views import TheocatViewSet
 # from CATspirations.views import TheocatView
+from PURRmission.views import AuthUser
 
 # from rest_framework.authtoken import views as auth_views
 
 router = DefaultRouter()
 router.register(r'CATspirations', TheocatViewSet, basename="theocat")
+router.register(r'PURRmission', AuthUser, basename="ath_testing")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
