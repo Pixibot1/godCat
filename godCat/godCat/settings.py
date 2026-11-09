@@ -56,10 +56,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'godCat.urls'
 
+import os
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 'DIRS': [],
+        'DIRS': [BASE_DIR / 'godCat' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
