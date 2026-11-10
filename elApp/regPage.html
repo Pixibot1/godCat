@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>electron app</title>
+  </head>
+  <body>
+    <h1>Come under godCat care!</h1>
+    <a id="homeBtn" href="index.html">Return</a>
+    <div id="regDiv">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registration</button>
+        </form>
+    </div>
+    <script src="regPage.js"></script>
+  </body>
+</html>
