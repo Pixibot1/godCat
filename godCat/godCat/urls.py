@@ -34,7 +34,7 @@ urlpatterns = [
     # path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('', RedirectView.as_view(url='/api/CATspirations/', permanent=False), name='home'),    
     
-    path('api/PURRmission/reg/', RegisterView.as_view(),  basename="reg"),
+    path('api/PURRmission/reg/', RegisterView.as_view(),  name="reg"),
     
     path('api/', include(router.urls)),
     

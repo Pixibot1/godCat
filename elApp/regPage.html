@@ -2,16 +2,25 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>electron app</title>
   </head>
   <body>
     <h1>Come under godCat care!</h1>
     <a id="homeBtn" href="index.html">Return</a>
     <div id="regDiv">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Registration</button>
+        <form method="post" id="regForm">
+            
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required>
+
+          <button type="submit">Registration</button>
         </form>
     </div>
     <script src="regPage.js"></script>
